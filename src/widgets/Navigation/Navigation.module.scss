@@ -1,0 +1,44 @@
+// Стили для десктопной версии меню
+
+.navigation__wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .logo{
+    width: 15rem;
+  }
+
+  // Стили для мобильного меню
+  .mobileMenu {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// Адаптивные стили
+@media (min-width: $md) {
+  .navigation__wrapper {
+
+    .desktopMenu {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobileMenu {
+      display: none;
+    }
+
+    .logo{
+      width: 20rem;
+    }
+  }
+}

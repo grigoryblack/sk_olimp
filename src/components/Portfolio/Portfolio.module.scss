@@ -1,0 +1,146 @@
+.portfolio__wrapper {
+  width: 100%;
+  background-color: $grayscale-3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .portfolio__container {
+    max-width: $xlg;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+
+    .cards{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+
+      .card__inner{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        p {
+          text-align: center;
+          font-size: 1rem;
+        }
+
+        .check_work__button{
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid $yellow-1;
+          border-radius: 5px;
+          font-size: 1rem;
+          color: $font_grayscale-3;
+          background-color: rgba($font_yellow-1, 0.1);
+          cursor: pointer;
+
+          &:hover{
+            background-color: rgba($font_yellow-1, 0.3);
+            transition: 0.3s all;
+          }
+        }
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $font_grayscale-1;
+      position: relative;
+      margin-bottom: 1rem;
+
+      &:before{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 20%;
+        height: 1px;
+        background-color: $yellow-1;
+      }
+    }
+  }
+}
+
+@media (min-width: $sm) {
+  .portfolio__wrapper {
+
+    .portfolio__container {
+      padding: 0 1rem;
+
+      .cards {
+
+        .card__inner{
+          p {
+            text-align: center;
+            font-size: 1.5rem;
+          }
+
+          .check_work__button{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .portfolio__wrapper {
+
+    .portfolio__container {
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        p{
+          height: 5rem;
+        }
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .portfolio__wrapper {
+
+    .portfolio__container {
+
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+
+        .card__inner{
+
+          p {
+            text-align: center;
+            font-size: 1rem;
+            height: 3rem;
+          }
+
+          .check_work__button{
+            font-size: 1rem;
+          }
+        }
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+
+        &:before {
+          width: 5%;
+        }
+      }
+    }
+  }
+}
